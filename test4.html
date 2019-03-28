@@ -1,0 +1,67 @@
+<html>
+<head> 
+<link rel="stylesheet" href="css4.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="test4.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" style = "background-color: #3d385a">
+<i class = "fa fa-refresh" style = "color: white; margin: 50px; font-size: 50px; z-index: 10; position: fixed; cursor: pointer;"></i>
+<div class="section" >
+<div class="container-rotated">
+
+<div class="card" ng-click = "edit('content1')">
+Карточка номер 1 </br>
+{{content1}}
+</div>
+<div class="card" ng-click = "edit('content2')">
+Карточка номер 2
+{{content2}}
+</div>
+<div class="card" ng-click = "edit('content3')">
+Карточка номер 3
+{{content3}}
+</div>
+<div class="card" ng-click = "edit('content4')">
+Карточка номер 4
+{{content4}}
+</div>
+<div class="card" ng-click = "edit('content5')">
+Карточка номер 5
+{{content5}}
+</div>
+<div class="card" ng-click = "edit('content6')">
+Карточка номер 6
+{{content6}}
+</div>
+
+</div>
+</div>
+
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Пожалуйста, введите текст:</h4>
+        </div>
+        <div class="modal-body">
+		<input style = "width: 100%" type="text" ng-model = "model" ng-change = "saveChanges()"></input>
+        </div>		
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>
